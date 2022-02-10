@@ -19,7 +19,6 @@ function SingIn() {
       [e.target.id]: e.target.value,
 
     }))
-    
   }
 
   return (
@@ -45,6 +44,7 @@ function SingIn() {
                   : 'password'}
                 className='passwordInput'
                 placeholder='Password'
+                id='password'
                 value={password}
                 onChange={onChange}
               />

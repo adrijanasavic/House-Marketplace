@@ -32,7 +32,7 @@ function SingUp() {
         <main>
           <form>
             <input
-              type="name"
+              type="text"
               className='nameInput'
               placeholder='Name'
               id='name'
