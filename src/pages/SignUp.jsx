@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebace.config'
+import { db } from '../firebase.config'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibillityIcon from '../assets/svg/visibilityIcon.svg'
 
