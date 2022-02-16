@@ -14,7 +14,6 @@ function Slider() {
 
   const navigate = useNavigate()
 
-
   useEffect(() => {
     const fetchListings = async () => {
       const listingsRef = collection(db, 'listings')

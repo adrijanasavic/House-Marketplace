@@ -5,7 +5,6 @@ import { db } from '../firebase.config'
 import { toast } from 'react-toastify'
 
 function Contact() {
-
     const [message, setMessage] = useState('')
     const [landlord, setLandlord] = useState(null)
     // eslint-disable-next-line
@@ -68,7 +67,8 @@ function Contact() {
                     </form>
                 </main>
             )}
-        </div>)
+        </div>
+    )
 }
 
 export default Contact

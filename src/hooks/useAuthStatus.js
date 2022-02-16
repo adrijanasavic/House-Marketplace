@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef  } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 export const useAuthStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
-    const [chekingStatus, setChekingStatus] = useState(true)
+    const [checkingStatus, setCheckingStatus] = useState(true)
     const isMounted = useRef(true)
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export const useAuthStatus = () => {
                 if (user) {
                     setLoggedIn(true)
                 }
-                setChekingStatus(false)
+                setCheckingStatus(false)
             })
         }
 
@@ -21,10 +21,11 @@ export const useAuthStatus = () => {
             isMounted.current = false
         }
     }, [isMounted])
-    return { loggedIn, chekingStatus }
+
+    return { loggedIn, checkingStatus }
 }
 
-
+// Protected routes in v6
 // https://stackoverflow.com/questions/65505665/protected-route-with-firebase
 
 // Fix memory leak warning
